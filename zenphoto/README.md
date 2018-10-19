@@ -12,12 +12,11 @@ It also needs to mount 2 volumes:
 Just try out something like:
 ```sh
 docker run -p 9002:80 --name=zenphoto \
-        -v zenphoto/mysql:/var/lib/mysql \
         -v zenphoto/www:/var/www/html \
-        -d emieza/zenphoto
+        -d zhoutaomtv/zenphoto
 ```
 
-First time run will need more time to create MySQL database.
+需要自己单独准备mysql服务器，在/var/www/html/zp-data/zenphoto.cfg.php文件中指定自己的server/user/password/database_name，并且将database创建出来(create database zenphoto;)
 
 You will have to access with your browser to your machine, something like:
         http://mydockermachine:9002
