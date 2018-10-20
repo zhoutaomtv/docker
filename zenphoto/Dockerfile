@@ -14,7 +14,10 @@ rm -rf /var/lib/apt/lists/* && \
 rm -rf /var/www/html/* && \
 curl -o /zenphoto.tgz https://codeload.github.com/zenphoto/zenphoto/tar.gz/master && \
 sed -i "/upload_max_filesize/c\upload_max_filesize = 50M" /etc/php/7.2/apache2/php.ini && \
-echo "<Directory /var/www>" >> /etc/apache2/sites-available/000-default.conf && \
+a2enmod headers && \
+a2enmod ssl && \
+a2enmod rewrite && \
+echo "<Directory /var/www/html>" >> /etc/apache2/sites-available/000-default.conf && \
 echo "	AllowOverride All" >> /etc/apache2/sites-available/000-default.conf && \
 echo "	Options -Indexes +FollowSymLinks" >> /etc/apache2/sites-available/000-default.conf && \
 echo "</Directory>" >> /etc/apache2/sites-available/000-default.conf && \
