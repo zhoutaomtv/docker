@@ -24,6 +24,6 @@ echo "</VirtualHost>" >> /etc/apache2/sites-available/000-default.conf
 ADD run.sh /run.sh
 RUN chmod 755 /run.sh
 
-EXPOSE 80
+EXPOSE 80 443
 
 CMD ["/bin/bash","/run.sh"]
