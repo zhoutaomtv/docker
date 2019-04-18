@@ -1,7 +1,7 @@
-FROM arm32v6/golang:1.9-alpine AS builder
+FROM arm32v7/golang:alpine AS builder
 LABEL maintainer="Toddy Zhou <zhoutaomtv@gmail.com>"
 
-ENV PKGVER   0.14.49
+ENV PKGVER   1.1.1
 
 # Busybox wget needs TLS support, curl is less painful to get working
 RUN apk add --no-cache ca-certificates curl && \
@@ -16,7 +16,7 @@ RUN apk add --no-cache ca-certificates curl && \
     go run build.go -no-upgrade -version v${PKGVER} build strelaysrv
 
 #Building thin container
-FROM arm32v6/alpine:3.8
+FROM arm32v7/alpine
 
 RUN apk add --no-cache ca-certificates
 COPY --from=builder /go1/src/github.com/syncthing/syncthing/strelaysrv /usr/bin/strelaysrv

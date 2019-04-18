@@ -1,7 +1,7 @@
 
-基于https://hub.docker.com/r/kylemanna/syncthing-relay/，将基础镜像更换为ARM32V6下面对应的进行编译生成
+基于https://hub.docker.com/r/kylemanna/syncthing-relay/，将基础镜像更换为ARM32V7下面对应的进行编译生成
 
-Syncthing: 0.14.49
+Syncthing: 1.1.1
 
 
 ##  Quick Start
