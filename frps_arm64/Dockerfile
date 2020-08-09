@@ -1,4 +1,4 @@
-FROM arm64v8/alpine:3.9
+FROM arm64v8/alpine
 
 ENV FRP_VERSION 0.33.0
 ENV FRP_ARCH arm64
