@@ -1,6 +1,6 @@
-FROM arm32v6/alpine:3.8
+FROM arm64v8/alpine:3.13
 
-ENV FRP_VERSION 0.28.2
+ENV FRP_VERSION 0.37.0
 ENV FRP_ARCH arm64
 
 RUN wget --no-check-certificate https://github.com/fatedier/frp/releases/download/v${FRP_VERSION}/frp_${FRP_VERSION}_linux_${FRP_ARCH}.tar.gz && \ 
