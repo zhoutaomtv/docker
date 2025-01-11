@@ -1,6 +1,6 @@
-FROM alpine:3.8
+FROM alpine:3
 
-ENV FRP_VERSION 0.31.2
+ENV FRP_VERSION 0.61.1
 
 RUN wget --no-check-certificate https://github.com/fatedier/frp/releases/download/v${FRP_VERSION}/frp_${FRP_VERSION}_linux_amd64.tar.gz && \ 
     tar xzf frp_${FRP_VERSION}_linux_amd64.tar.gz && \
@@ -17,4 +17,4 @@ VOLUME /conf
 
 EXPOSE 50001 50002 50003 50004 50005
 
-ENTRYPOINT ["/frpc","-c","/conf/frpc.ini"]
+ENTRYPOINT ["/frpc","-c","/conf/frpc.toml"]
