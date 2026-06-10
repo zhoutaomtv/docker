@@ -16,4 +16,4 @@ WORKDIR /
 
 VOLUME /conf
 
-ENTRYPOINT ["/frps","-c","/conf/frps.ini"]
+ENTRYPOINT ["/frps","-c","/conf/frps.toml"]

@@ -18,4 +18,4 @@ VOLUME /conf
 
 EXPOSE 50001 50002 50003 50004 50005
 
-ENTRYPOINT ["/frpc","-c","/conf/frpc.ini"]
+ENTRYPOINT ["/frpc","-c","/conf/frpc.toml"]
